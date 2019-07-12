@@ -1,1 +1,12 @@
-This is our amazing custom theme.
+<?php 
+  //Main loop that iterates over all posts in Wordpress website
+  while(have_posts()){
+
+    the_post(); ?>
+    <h2><?php the_title(); ?></h2>
+    <?php the_content(); ?>
+    <hr>    
+  <?php }
+?>
+
+

@@ -1,4 +1,8 @@
 <?php 
+
+  //pull in contents of header.php
+  get_header();
+
   //Main loop that iterates over all posts in Wordpress website
   while(have_posts()){
 
@@ -9,4 +13,8 @@
     <?php the_content(); ?>
      
   <?php }
+
+  //pull in contents of footer.php
+  get_footer(); 
+  
 ?>

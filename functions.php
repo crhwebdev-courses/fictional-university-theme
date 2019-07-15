@@ -11,4 +11,13 @@
   //add action that runs when at a certain time (i.e. when loading in header files)
   add_action('wp_enqueue_scripts', 'university_files');
 
+
+  function university_features(){
+    //add support for custom title tags
+    add_theme_support('title-tag');
+  }
+
+  //add an action to setup stuff after theme is loaded
+  add_action('after_setup_theme', 'university_features');
+
 ?>

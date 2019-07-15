@@ -8,5 +8,4 @@
 
   <body>
     <h1>Ficitonal University</h1>
-  </body>
-</html>
+ 

@@ -33,7 +33,19 @@
       }     
      ?>
     
-    
+    <?php  
+
+      //get a list of pages that are children of this page - if nothing is returned
+      // this value will be falsey
+      $testArray = get_pages(array(
+        'child_of' => get_the_ID()
+      ));
+
+      //test to see if this page is a parent or has a list of children pages.
+      //if it fits either condition, then display the side-bar menu.
+      if($theParent or $testArray) { 
+    ?>
+
     <div class="page-links">
       <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent) ?>"><?php echo get_the_title($theParent) ?></a></h2>
       <ul class="min-list">
@@ -58,6 +70,8 @@
         ?>
       </ul>
     </div>
+
+    <?php } ?>
 
     <div class="generic-content">
       <?php the_content(); ?>

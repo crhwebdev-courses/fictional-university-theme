@@ -39,12 +39,18 @@
       <ul class="min-list">
         <?php 
          
+          
           if($theParent != 0){
             $findChildrenOf = $theParent;
           } else {
             $findChildrenOf = get_the_ID();
           }
 
+          //this wordpress function creates a li items for each page in the website with some configuration given
+          // by an associate array : 'title_li' tells if it should show a title in the list of pages and
+          // 'child_of' tells it to only list pages that are children of a given page id
+          // this list also has classes associated with it that can be formated, including 'current_page' so that we
+          // can style the currently selected page
           wp_list_pages(array(
             'title_li' => NULL,
             'child_of' => $findChildrenOf

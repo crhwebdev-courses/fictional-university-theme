@@ -18,6 +18,8 @@
 
     //add custom wordpress menu that will appear in admin panel under Apperance -> Menus
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerLocationOne', 'Footer Location One');
+    register_nav_menu('footerLocationTwo', 'Footer Location Two');
   }
 
   //add an action to setup stuff after theme is loaded

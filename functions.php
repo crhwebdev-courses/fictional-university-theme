@@ -15,6 +15,9 @@
   function university_features(){
     //add support for custom title tags
     add_theme_support('title-tag');
+
+    //add custom wordpress menu that will appear in admin panel under Apperance -> Menus
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
   }
 
   //add an action to setup stuff after theme is loaded

@@ -26,6 +26,9 @@
       <div class="generic-content">
       <?php the_excerpt(); ?>
       </div>
+
+      <p><a class="btn btn--blue" href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
+
   </div>
 
   <?php    

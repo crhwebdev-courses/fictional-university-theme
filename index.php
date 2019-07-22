@@ -19,7 +19,7 @@
   ?>
 
   <div class="post-item">
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       <div class="metabox">
         <p>Post by Carl on 6.8.19 in News</p>
       </div>

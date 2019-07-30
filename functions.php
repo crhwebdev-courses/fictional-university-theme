@@ -25,4 +25,20 @@
   //add an action to setup stuff after theme is loaded
   add_action('after_setup_theme', 'university_features');
 
+  //custom function to register custom post types
+  function university_post_types(){
+    
+    //register event post type
+    register_post_type('event', array(
+      'public' => true,
+      'labels' => array(
+        'name' => 'Events'
+      ),
+      'menu_icon' => 'dashicons-calendar'
+    ));
+  }
+
+  //add custom event types to theme
+  add_action('init', 'university_post_types');
+
 ?>
